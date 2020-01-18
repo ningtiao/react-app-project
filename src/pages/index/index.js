@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-export default class Index extends Component {
-    componentDidMount() {
-        
-    }
-    render() {
-        return (
-            <div>
-                woshi首页
-            </div>
-        )
-    }
+import React, { useState } from 'react'
+function Index() {
+    const [count, setCount] = useState(0);
+    return (
+        <div>
+            <button onClick={()=> setCount(count + 1)}>+</button>
+            <span>{count}</span>
+            <button onClick={() => setCount((count) => count - 1)}>-</button>
+        </div>
+    );
 }
+
+export default Index;
 
